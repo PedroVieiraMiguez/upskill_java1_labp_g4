@@ -1,0 +1,32 @@
+@startuml
+
+title UC1 - Registar Clube Desportivo
+
+activate Utilizador
+Utilizador->UC1_UI:iniciar registo
+activate UC1_UI
+UC1_UI-->Utilizador:Introduza os dados
+Utilizador->UC1_UI:introduz nome, data de fundação
+deactivate Utilizador
+UC1_UI->UC1_Controller:registarClubeDesportivo(nome, data de fundação)
+activate UC1_Controller
+activate ClubeDesportivo
+UC1_Controller-->ClubeDesportivo:clubeDesp:new ClubeDesportivo(nome, data de fundação)
+UC1_Controller<--ClubeDesportivo:criação confirmada
+deactivate ClubeDesportivo
+
+Sistema<--UC1_Controller: addClubeDesportivo(clubeDesp)
+activate Sistema
+Sistema-->Sistema:addClubeDesportivo(clubeDesp)
+deactivate Sistema
+Sistema-->UC1_Controller: success
+UC1_Controller-->UC1_UI: sucess
+deactivate UC1_Controller
+UC1_UI-->Utilizador: sucesso no registo
+deactivate UC1_UI
+
+
+
+
+
+@enduml
