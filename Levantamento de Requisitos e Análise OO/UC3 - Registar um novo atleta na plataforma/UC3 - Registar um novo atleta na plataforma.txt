@@ -1,0 +1,10 @@
+@startuml
+
+Utilizador --> Sistema: Inicia processo de registo de um atleta
+Sistema -> Utilizador: Solicita dados (nome, número de identificação civil, género e idade (data de nascimento), atividade associada e objetivo de treino)
+Utilizador --> Sistema: Insere dados solicitados
+Sistema -> Utilizador: Valida informação, apresenta dados e solicita confirmação
+Utilizador --> Sistema: Confirma dados
+Sistema -> Utilizador: Sistema regista os dados, associa atleta ao clube e informa do sucesso da operação
+
+@enduml

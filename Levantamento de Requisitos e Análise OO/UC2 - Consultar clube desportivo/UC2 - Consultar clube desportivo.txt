@@ -1,0 +1,9 @@
+@startuml
+
+Utilizador --> Sistema: Inicia processo de consulta de clube
+Sistema -> Utilizador: Solicita indicação do clube a consultar
+Utilizador --> Sistema: Indica o clube
+Sistema -> Utilizador: Regista e valida informação introduzida
+Sistema -> Utilizador: Sistema apresenta nome do clube e respetiva informação (ano de fundação e atletas associados).
+
+@enduml
