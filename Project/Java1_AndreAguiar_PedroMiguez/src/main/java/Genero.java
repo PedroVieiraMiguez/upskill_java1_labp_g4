@@ -1,4 +1,3 @@
-public interface Genero {
-    String MASCULINO = "Masculino";
-    String FEMININO = "Feminino";
+public enum Genero {
+    MASCULINO, FEMININO
 }
