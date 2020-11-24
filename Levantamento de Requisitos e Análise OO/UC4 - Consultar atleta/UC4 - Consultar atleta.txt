@@ -1,0 +1,9 @@
+@startuml
+
+Utilizador --> Sistema: Inicia processo de consulta de atleta
+Sistema -> Utilizador: Solicita indicação do atleta a consultar
+Utilizador --> Sistema: Indica o atleta
+Sistema -> Utilizador: Regista e valida informação introduzida
+Sistema -> Utilizador: Sistema apresenta nome do atleta e a respetiva informação (número de identificação civil, género e idade (data de nascimento), tipo de atleta, atividade e objetivo de treino).
+
+@enduml
