@@ -1,0 +1,9 @@
+@startuml
+
+Utilizador --> Sistema: Inicia o processo de listagem de atletas de um clube
+Sistema -> Utilizador: Solicita indicação do clube para o qual pretende a listagem
+Utilizador --> Sistema: Indica o clube
+Sistema -> Utilizador: Regista e valida informação introduzida
+Sistema -> Utilizador: Sistema apresenta a listagem de atletas do clube e respectiva informação (nome, número de identificação civil, género e idade, prémios acumulados, FCR, atividade, objetivo de treino).
+
+@enduml
