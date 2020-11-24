@@ -19,7 +19,7 @@ public class Atleta {
         this.idade = idade;
         this.freqCardRepouso = freqCardRepouso;
         this.premioAcumulado = premioAcumulado;
-        this.genero = genero;
+        this.setGenero(genero);
     }
 
     public String getNome() {
@@ -60,5 +60,13 @@ public class Atleta {
 
     public void setPremioAcumulado(double premioAcumulado) {
         this.premioAcumulado = premioAcumulado;
+    }
+
+    public String getGenero() {
+        return genero.toString();
+    }
+
+    public void setGenero(Genero genero) {
+        this.genero = genero;
     }
 }
