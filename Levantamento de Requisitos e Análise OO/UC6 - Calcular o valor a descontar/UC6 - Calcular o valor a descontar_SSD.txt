@@ -1,0 +1,9 @@
+@startuml
+
+Utilizador --> Sistema: Solicita o valor a descontar ao auferido por um atleta
+Sistema -> Utilizador: Solicita dados necessários (número de identificação civil)
+Utilizador --> Sistema: Indica dados necessários
+Sistema -> Utilizador: Regista e valida informação introduzida
+Sistema -> Utilizador: Efectua o cálculo e apresenta o resultado
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+left to right direction
+
+actor "Utilizador" as user
+rectangle Plataforma {
+  usecase "UC1 - Registar um novo clube desportivo" as UC1
+  usecase "UC2 - Consultar clube desportivo" as UC2
+  usecase "UC3 - Registar um novo atleta na plataforma:" as UC3
+  usecase "UC4 - Listar atleta" as UC4
+  usecase "UC5 - Calcular valor a pagar ao atleta" as UC5
+  usecase "UC6 - Calcular o valor a descontar" as UC6
+  usecase "UC7 - Calcular FCM" as UC7
+  usecase "UC8 - Calcular FCT" as UC8
+}
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+user --> UC5
+user --> UC6
+user --> UC7
+user --> UC8
+
+@enduml
