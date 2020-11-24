@@ -19,6 +19,7 @@
 *.tar.gz
 *.rar
 *.idea
+*.DS_Store
 
 #netbeans specific
 core
