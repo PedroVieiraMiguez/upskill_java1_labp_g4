@@ -34,4 +34,9 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
             return getParcelaFixa() * 0.2;
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
 }
