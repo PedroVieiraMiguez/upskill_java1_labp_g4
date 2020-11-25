@@ -4,14 +4,17 @@ public class AtletaAmador extends AtletaNaoProfissional{
 
     private static double percentagemMensal = 0.07;
     private static int valorMinimo = 5;
+    private static int totalAtletasAmador = 0;
 
     public AtletaAmador(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado,
                         Genero genero, Atividade atividade, ObjectivoTreino objectivo, int antiguidade) {
         super(nome, numIdCivil, idade, freqCardRepouso, premioAcumulado, genero, atividade, objectivo, antiguidade );
+        totalAtletasAmador++;
     }
 
     public AtletaAmador(){
         super();
+        totalAtletasAmador++;
     }
 
     public static double getPercentagemMensal() {
@@ -55,7 +58,12 @@ public class AtletaAmador extends AtletaNaoProfissional{
     
     @Override
     public String toString(){
-        return String.format("Tipo de Atleta: %s%n%s", this.getClass(), super.toString());
+        return String.format("%s", super.toString());
     }
+    
+    
+    public static int getTotalAtletasAmador(){
+        return totalAtletasAmador;
+    } 
 
 }

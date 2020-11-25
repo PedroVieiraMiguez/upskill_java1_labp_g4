@@ -196,10 +196,10 @@ public abstract class Atleta implements Comparable<Atleta> {
     
     @Override
     public String toString(){
-        return String.format("Nome: %s || Numero de Identificação Civil: %d || Idade: %d || G�nero: %s"
-                + "%nAtividade: %s || Objectivo de treino: %s || Frequência Card�aca de Treino: %s%n"
-                + "Valor dos Prémios Mensal: %.2f || "
-                + "", getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
+        return String.format("Tipo de Atleta: %s%nNome: %s || Numero de Identifica��o Civil: %d || Idade: %d || G�nero: %s"
+                + "%nAtividade: %s || Objectivo de treino: %s || Frequ�ncia Card�aca de Treino: %s%n"
+                + "Valor dos Pr�mios Mensal: %.2f || "
+                + "", this.getClass(), getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
 
     @Override

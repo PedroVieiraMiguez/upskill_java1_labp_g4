@@ -1,14 +1,17 @@
 public class AtletaSemiProfissional extends AtletaNaoProfissional {
 
     private static double parcelaFixa = 100;
+    private static int totalAtletasSemiProfissional = 0;
 
     public AtletaSemiProfissional(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado,
                         Genero genero, Atividade atividade, ObjectivoTreino objectivo, int antiguidade) {
         super(nome, numIdCivil, idade, freqCardRepouso, premioAcumulado, genero, atividade, objectivo, antiguidade );
+        totalAtletasSemiProfissional++;
     }
 
     public AtletaSemiProfissional(){
         super();
+        totalAtletasSemiProfissional++;
     }
 
     public static double getParcelaFixa() {
@@ -35,6 +38,12 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     
     @Override
     public String toString(){
-        return String.format("Tipo de Atleta: %s%n%sValor de Rendimento Fixo: %.2f || ", this.getClass(), super.toString(), getParcelaFixa());
+        return String.format("%sValor de Rendimento Fixo: %.2f || ", super.toString(), getParcelaFixa());
     }
+    
+    
+    public static int getTotalAtletasSemiProfissional(){
+        return totalAtletasSemiProfissional;
+    }     
+
 }
