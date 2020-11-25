@@ -1,2 +1,3 @@
-public interface ObjectivoTreino {
+public enum ObjectivoTreino {
+    
 }

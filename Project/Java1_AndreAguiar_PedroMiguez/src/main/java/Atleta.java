@@ -16,6 +16,7 @@ public class Atleta {
     private static final double FCR_OMISSAO = 0;
     private static final double PREMIO_OMISSAO = 0;
     private static final Genero GENERO_OMISSAO = Genero.MASCULINO;
+    private static final Atividade ATIVIDADE_OMISSAO = Atividade.INDEFINIDO;
 
     public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade) {
         this.nome = nome;
@@ -34,6 +35,7 @@ public class Atleta {
         this.setFreqCardRepouso(FCR_OMISSAO);
         this.setPremioAcumulado(PREMIO_OMISSAO);
         this.setGenero(GENERO_OMISSAO);
+        this.setAtividade(ATIVIDADE_OMISSAO);
     }
 
     public String getNome() {
