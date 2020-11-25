@@ -39,4 +39,10 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     public boolean equals(Object o) {
         return super.equals(o);
     }
+    
+    
+    @Override
+    public String toString(){
+        return String.format("Tipo de Atleta: %s%n%sValor de Rendimento Fixo: %.2f || ", this.getClass(), super.toString(), getParcelaFixa());
+    }
 }
