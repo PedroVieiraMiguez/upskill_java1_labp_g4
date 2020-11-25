@@ -44,4 +44,8 @@ public class ClubeDesportivo {
         return atletasInscritos;
     }
 
+    @Override
+    public String toString(){
+        return String.format("Nome do clube: %s || Data de Fundação: %s%n", getNomeClube(), getDataFundacao());
+    }
 }
