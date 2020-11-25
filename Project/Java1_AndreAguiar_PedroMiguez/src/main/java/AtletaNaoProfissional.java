@@ -33,5 +33,10 @@ public abstract class AtletaNaoProfissional extends Atleta {
         AtletaNaoProfissional that = (AtletaNaoProfissional) o;
         return getAntiguidade() == that.getAntiguidade();
     }
+    
+    @Override
+    public String toString(){
+        return String.format("%sAntiguidade: %d || ", super.toString(), getAntiguidade());
+    }
 
 }
