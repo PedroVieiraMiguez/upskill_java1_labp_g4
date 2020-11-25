@@ -140,7 +140,22 @@ public abstract class Atleta {
     }
 
     public double freqCardMax(){
-        return 0;
+        if (this.atividade == Atividade.CAMINHADA || this.atividade == Atividade.CORRIDA){
+            return 208.75 - (0.73 * getIdade());
+        }
+        else {
+            if (this.atividade == Atividade.NATACAO){
+                return 204 - (1.7 * getIdade());
+            }
+            else {
+                if (this.atividade == Atividade.CICLISMO && this.genero == Genero.FEMININO){
+                    return 189 - (0.56 * getIdade());
+                    }
+                else {
+                    return 202 - (0.72 * getIdade());
+                }
+            }
+        }
     }
 
     public double determinarIT(){
