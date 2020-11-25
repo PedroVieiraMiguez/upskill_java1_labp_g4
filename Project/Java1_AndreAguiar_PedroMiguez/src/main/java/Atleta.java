@@ -9,6 +9,7 @@ public class Atleta {
     private double premioAcumulado;
     private Genero genero;
     private Atividade atividade;
+    private ObjectivoTreino objectivoTreino;
 
     private static final String NOME_OMISSAO = "Sem nome";
     private static final int NUMID_OMISSAO = 0;
@@ -17,8 +18,9 @@ public class Atleta {
     private static final double PREMIO_OMISSAO = 0;
     private static final Genero GENERO_OMISSAO = Genero.MASCULINO;
     private static final Atividade ATIVIDADE_OMISSAO = Atividade.INDEFINIDO;
+    private static final ObjectivoTreino OBJECTIVO_TREINO_OMISSAO = ObjectivoTreino.INDEFINIDO;
 
-    public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade) {
+    public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, ObjectivoTreino objectivoTreino) {
         this.nome = nome;
         this.numIdCivil = numIdCivil;
         this.idade = idade;
@@ -26,6 +28,7 @@ public class Atleta {
         this.premioAcumulado = premioAcumulado;
         this.setGenero(genero);
         this.setAtividade(atividade);
+        this.setObjectivoTreino(objectivoTreino);
     }
 
     public Atleta(){
@@ -36,6 +39,8 @@ public class Atleta {
         this.setPremioAcumulado(PREMIO_OMISSAO);
         this.setGenero(GENERO_OMISSAO);
         this.setAtividade(ATIVIDADE_OMISSAO);
+        this.setObjectivoTreino(OBJECTIVO_TREINO_OMISSAO);
+        
     }
 
     public String getNome() {
@@ -89,8 +94,8 @@ public class Atleta {
     /**
      * @return the atividade
      */
-    public Atividade getAtividade() {
-        return atividade;
+    public String getAtividade() {
+        return atividade.toString();
     }
 
     /**
@@ -98,5 +103,19 @@ public class Atleta {
      */
     public void setAtividade(Atividade atividade) {
         this.atividade = atividade;
+    }
+
+    /**
+     * @return the objectivoTreino
+     */
+    public String getObjectivoTreino() {
+        return objectivoTreino.toString();
+    }
+
+    /**
+     * @param objectivoTreino the objectivoTreino to set
+     */
+    public void setObjectivoTreino(ObjectivoTreino objectivoTreino) {
+        this.objectivoTreino = objectivoTreino;
     }
 }
