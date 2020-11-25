@@ -1,5 +1,7 @@
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
+import java.util.Objects;
+
 public abstract class Atleta {
 
     private String nome;
@@ -131,6 +133,26 @@ public abstract class Atleta {
      */
     public void setObjectivoTreino(ObjectivoTreino objectivoTreino) {
         this.objectivoTreino = objectivoTreino;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Atleta atleta = (Atleta) o;
+        return getNumIdCivil() == atleta.getNumIdCivil() &&
+                getIdade() == atleta.getIdade() &&
+                Double.compare(atleta.getFreqCardRepouso(), getFreqCardRepouso()) == 0 &&
+                Double.compare(atleta.getPremioAcumulado(), getPremioAcumulado()) == 0 &&
+                Objects.equals(getNome(), atleta.getNome()) &&
+                getGenero() == atleta.getGenero() &&
+                getAtividade() == atleta.getAtividade() &&
+                getObjectivoTreino() == atleta.getObjectivoTreino();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNome(), getNumIdCivil(), getIdade(), getFreqCardRepouso(), getPremioAcumulado(), getGenero(), getAtividade(), getObjectivoTreino());
     }
 
     public double calcularPagamento() {
