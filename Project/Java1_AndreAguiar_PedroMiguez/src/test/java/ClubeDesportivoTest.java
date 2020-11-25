@@ -49,4 +49,25 @@ class ClubeDesportivoTest {
 
         assertArrayEquals(expected.toArray(), result.toArray());
     }
+    
+    @Test
+    void testCalcularValorTotalIRS(){
+        AtletaAmador a1 = new AtletaAmador("João", 123, 20, 60, 100,
+                Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
+        AtletaProfissional a2 = new AtletaProfissional("Andrade", 123, 20, 60, 100,
+                Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 1500);
+        AtletaSemiProfissional a3 = new AtletaSemiProfissional("Zelda", 123, 20, 60, 100,
+                Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        test.addAtleta(a1);
+        test.addAtleta(a2);
+        test.addAtleta(a3);
+        
+        double expectedResult = 160;
+        
+        double result = test.calcularValorTotalIRS(test.getAtletasInscritos());
+        
+         assertEquals(expectedResult, result);
+    }
+    
 }
