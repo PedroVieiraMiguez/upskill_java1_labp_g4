@@ -83,6 +83,10 @@ public abstract class Atleta {
         this.premioAcumulado = premioAcumulado;
     }
 
+    public void addPremio(double valor){
+        setPremioAcumulado(getPremioAcumulado() + valor);
+    }
+
     public String getGenero() {
         return genero.toString();
     }
@@ -127,5 +131,17 @@ public abstract class Atleta {
     public abstract double determinarParcela1();
 
     public abstract double determinarParcela2();
+
+    public double freqCardTrabalho(){
+        return 0;
+    }
+
+    public double freqCardMax(){
+        return 0;
+    }
+
+    public double determinarIT(){
+        return 0;
+    }
 
 }
