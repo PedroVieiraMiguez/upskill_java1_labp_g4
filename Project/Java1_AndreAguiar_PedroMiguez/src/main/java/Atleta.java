@@ -125,7 +125,7 @@ public abstract class Atleta {
     }
 
     public double calcularPagamento() {
-        return 0;
+        return determinarParcela1() + determinarParcela2();
     }
 
     public abstract double determinarParcela1();
