@@ -17,8 +17,11 @@ public abstract class Atleta {
     private static final double FCR_OMISSAO = 0;
     private static final double PREMIO_OMISSAO = 0;
     private static final Genero GENERO_OMISSAO = Genero.MASCULINO;
-    private static final Atividade ATIVIDADE_OMISSAO = Atividade.INDEFINIDO;
-    private static final ObjectivoTreino OBJECTIVO_TREINO_OMISSAO = ObjectivoTreino.INDEFINIDO;
+    private static final Atividade ATIVIDADE_OMISSAO = Atividade.CAMINHADA;
+    private static final ObjectivoTreino OBJECTIVO_TREINO_OMISSAO = ObjectivoTreino.QUEIMA_GORDURA;
+    
+    private static double QUEIMA_IT = 0.6;
+    private static double CARDIO_IT = 0.75;
 
     public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, ObjectivoTreino objectivo) {
         this.nome = nome;
@@ -125,7 +128,7 @@ public abstract class Atleta {
     }
 
     public double calcularPagamento() {
-        return 0;
+        return determinarParcela1() + determinarParcela2();
     }
 
     public abstract double determinarParcela1();
@@ -141,7 +144,12 @@ public abstract class Atleta {
     }
 
     public double determinarIT(){
-        return 0;
+        if (this.objectivoTreino == ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA){
+            return CARDIO_IT;
+        }
+        else{
+            return QUEIMA_IT;
+        }
     }
 
 }
