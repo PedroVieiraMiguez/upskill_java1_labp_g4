@@ -1,7 +1,7 @@
 
 import java.util.Objects;
 
-public abstract class Atleta {
+public abstract class Atleta implements Comparable<Atleta> {
 
     private String nome;
     private int numIdCivil;
@@ -196,10 +196,14 @@ public abstract class Atleta {
     
     @Override
     public String toString(){
-        return String.format("Nome: %s || Numero de Identificação Civil: %d || Idade: %d || Género: %s"
-                + "%nAtividade: %s || Objectivo de treino: %s || Frequência Cardíaca de Treino: %s%n"
-                + "Valor dos Prémios Mensal: %.2f || "
+        return String.format("Nome: %s || Numero de IdentificaÃ§Ã£o Civil: %d || Idade: %d || Gï¿½nero: %s"
+                + "%nAtividade: %s || Objectivo de treino: %s || FrequÃªncia Cardï¿½aca de Treino: %s%n"
+                + "Valor dos PrÃ©mios Mensal: %.2f || "
                 + "", getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
 
+    @Override
+    public int compareTo(Atleta a) {
+        return this.getNome().compareToIgnoreCase(a.getNome());
+    }
 }

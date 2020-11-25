@@ -2,10 +2,6 @@ import java.util.Objects;
 
 public class AtletaAmador extends AtletaNaoProfissional{
 
-    private int antiguidade;
-
-    private static final int ANTIGUIDADE_OMISSAO = 0;
-
     private static double percentagemMensal = 0.07;
     private static int valorMinimo = 5;
 
@@ -35,15 +31,8 @@ public class AtletaAmador extends AtletaNaoProfissional{
     }
 
     public double determinarParcela1() {
-        if (getAntiguidade() < 5) {
-            return 0;
-        } else if (getAntiguidade() <= 10) {
-            return getPremioAcumulado() * 0.02;
-        } else if (getAntiguidade() <= 20) {
-            return getPremioAcumulado() * 0.08;
-        } else {
-            return getPremioAcumulado() * 0.2;
-        }
+        return getPremioAcumulado() * getPercAntiguidade();
+
     }
 
     public double determinarParcela2() {

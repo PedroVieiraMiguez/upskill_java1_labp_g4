@@ -24,15 +24,7 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     }
 
     public double determinarParcela2() {
-        if (getAntiguidade() < 5) {
-            return 0;
-        } else if (getAntiguidade() <= 10) {
-            return getParcelaFixa() * 0.02;
-        } else if (getAntiguidade() <= 20) {
-            return getParcelaFixa() * 0.08;
-        } else {
-            return getParcelaFixa() * 0.2;
-        }
+        return getParcelaFixa() * getPercAntiguidade();
     }
 
     @Override

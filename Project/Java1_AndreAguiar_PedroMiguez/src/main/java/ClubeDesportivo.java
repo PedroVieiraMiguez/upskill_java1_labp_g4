@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ClubeDesportivo {
     private String nomeClube;
@@ -44,8 +45,16 @@ public class ClubeDesportivo {
         return atletasInscritos;
     }
 
+    public ArrayList<Atleta> getSortedByName() {
+        ArrayList<Atleta> atletasOrdenados = new ArrayList<Atleta>();
+        Collections.copy(atletasOrdenados, atletasInscritos);
+        Collections.sort(atletasOrdenados);
+        return atletasOrdenados;
+    }
+
     @Override
     public String toString(){
-        return String.format("Nome do clube: %s || Data de Fundação: %s%n", getNomeClube(), getDataFundacao());
+        return String.format("Nome do clube: %s || Data de FundaÃ§Ã£o: %s%n", getNomeClube(), getDataFundacao());
     }
+
 }

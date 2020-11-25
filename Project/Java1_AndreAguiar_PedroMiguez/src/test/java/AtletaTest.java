@@ -29,7 +29,7 @@ class AtletaTest {
     void testCalcularPagamentoProfissional() {
         AtletaProfissional a1 = new AtletaProfissional("João", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 100);
-        double expected = (100 - (100 * 0.1)) + (100 * 0.2);
+        double expected = 100 + (100 * 0.2);
         double result = a1.calcularPagamento();
 
         assertEquals(expected, result);
@@ -39,7 +39,7 @@ class AtletaTest {
     void testCalcularPagamentoSemiProfissional() {
         AtletaSemiProfissional a1 = new AtletaSemiProfissional("João", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 15);
-        double expected = (100 - (100 * 0.1)) + (100 * 0.08);
+        double expected = 100+ (100 * 0.08);
         double result = a1.calcularPagamento();
 
         assertEquals(expected, result);
