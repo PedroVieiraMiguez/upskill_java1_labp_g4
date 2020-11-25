@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class AtletaAmador extends AtletaNaoProfissional{
 
     private int antiguidade;
@@ -52,4 +54,14 @@ public class AtletaAmador extends AtletaNaoProfissional{
     public double calcularPagamento() {
         return super.calcularPagamento() < valorMinimo? valorMinimo : super.calcularPagamento();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        AtletaAmador that = (AtletaAmador) o;
+        return getAntiguidade() == that.getAntiguidade();
+    }
+
 }

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class AtletaProfissional extends Atleta{
     
     private double valorFixo;
@@ -57,7 +59,18 @@ public class AtletaProfissional extends Atleta{
     public double determinarParcela2() {
         return getPremioAcumulado() * percValorVar;
     }
-    
-    
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        AtletaProfissional that = (AtletaProfissional) o;
+        return Double.compare(that.getValorFixo(), getValorFixo()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getValorFixo());
+    }
 }
