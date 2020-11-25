@@ -73,4 +73,10 @@ public class AtletaProfissional extends Atleta{
     public int hashCode() {
         return Objects.hash(super.hashCode(), getValorFixo());
     }
+    
+    @Override
+    public String toString(){
+        return String.format("%sValor de Rendimento Fixo: %.2f || ", super.toString(), getValorFixo());
+    }
+    
 }
