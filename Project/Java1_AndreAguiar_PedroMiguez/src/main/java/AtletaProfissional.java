@@ -4,7 +4,7 @@ public class AtletaProfissional extends Atleta{
     
     private static final double VALOR_FIXO_OMISSAO = 0;
     
-    private static double percValorVar = 20;
+    private static double percValorVar = 0.20;
     
     
     public AtletaProfissional(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado,
@@ -50,7 +50,7 @@ public class AtletaProfissional extends Atleta{
 
     @Override
     public double determinarParcela1() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return getValorFixo() - (getValorFixo() * getIRS());
     }
 
     @Override
