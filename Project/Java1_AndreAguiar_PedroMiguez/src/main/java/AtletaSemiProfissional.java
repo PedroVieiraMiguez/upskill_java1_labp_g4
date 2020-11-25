@@ -23,11 +23,16 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     }
 
     public double determinarParcela1() {
-        return getParcelaFixa() - (getParcelaFixa() * getIRS());
+        return getParcelaFixa();
     }
 
     public double determinarParcela2() {
         return getParcelaFixa() * getPercAntiguidade();
+    }
+    
+    @Override
+    public double calcularDescontoIrs(){
+        return getParcelaFixa() * getIRS();
     }
 
     @Override
