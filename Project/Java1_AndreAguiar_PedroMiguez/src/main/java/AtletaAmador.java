@@ -4,8 +4,9 @@ public class AtletaAmador extends AtletaNaoProfissional{
 
     private static final int ANTIGUIDADE_OMISSAO = 0;
 
-    public AtletaAmador(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, int antiguidade) {
-        super(nome, numIdCivil, idade, freqCardRepouso, premioAcumulado, genero, atividade, antiguidade );
+    public AtletaAmador(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado,
+                        Genero genero, Atividade atividade, ObjectivoTreino objectivo, int antiguidade) {
+        super(nome, numIdCivil, idade, freqCardRepouso, premioAcumulado, genero, atividade, objectivo, antiguidade );
     }
 
     public AtletaAmador(){

@@ -20,7 +20,7 @@ public abstract class Atleta {
     private static final Atividade ATIVIDADE_OMISSAO = Atividade.INDEFINIDO;
     private static final ObjectivoTreino OBJECTIVO_TREINO_OMISSAO = ObjectivoTreino.INDEFINIDO;
 
-    public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, ObjectivoTreino objectivoTreino) {
+    public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, ObjectivoTreino objectivo) {
         this.nome = nome;
         this.numIdCivil = numIdCivil;
         this.idade = idade;
@@ -28,7 +28,7 @@ public abstract class Atleta {
         this.premioAcumulado = premioAcumulado;
         this.setGenero(genero);
         this.setAtividade(atividade);
-        this.setObjectivoTreino(objectivoTreino);
+        this.setObjectivoTreino(objectivo);
     }
 
     public Atleta(){
