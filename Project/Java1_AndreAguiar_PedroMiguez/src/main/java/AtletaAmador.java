@@ -2,20 +2,20 @@ import java.util.Objects;
 
 public class AtletaAmador extends AtletaNaoProfissional{
 
-    private int antiguidade;
-
-    private static final int ANTIGUIDADE_OMISSAO = 0;
 
     private static double percentagemMensal = 0.07;
     private static int valorMinimo = 5;
+    private static int totalAtletasAmador = 0;
 
     public AtletaAmador(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado,
                         Genero genero, Atividade atividade, ObjectivoTreino objectivo, int antiguidade) {
         super(nome, numIdCivil, idade, freqCardRepouso, premioAcumulado, genero, atividade, objectivo, antiguidade );
+        totalAtletasAmador++;
     }
 
     public AtletaAmador(){
         super();
+        totalAtletasAmador++;
     }
 
     public static double getPercentagemMensal() {
@@ -68,5 +68,10 @@ public class AtletaAmador extends AtletaNaoProfissional{
     public String toString(){
         return String.format("%s", super.toString());
     }
+    
+    
+    public static int getTotalAtletasAmador(){
+        return totalAtletasAmador;
+    } 
 
 }
