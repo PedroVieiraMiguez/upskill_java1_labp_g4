@@ -48,7 +48,7 @@ public class AtletaAmador extends AtletaNaoProfissional{
     }
     
     @Override
-    public double calcularDescontoIrs(){
+    public double calcularDescontoIRS(){
         return 0;
     }
 

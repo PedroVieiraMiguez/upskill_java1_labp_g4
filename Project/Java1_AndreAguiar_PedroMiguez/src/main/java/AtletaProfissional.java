@@ -64,7 +64,7 @@ public class AtletaProfissional extends Atleta{
     }
     
     @Override
-    public double calcularDescontoIrs(){
+    public double calcularDescontoIRS(){
         return getValorFixo() * getIRS();
     }
 
