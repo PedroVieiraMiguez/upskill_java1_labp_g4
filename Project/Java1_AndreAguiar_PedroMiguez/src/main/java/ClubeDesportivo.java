@@ -46,7 +46,7 @@ public class ClubeDesportivo {
     }
 
     public ArrayList<Atleta> getSortedByName() {
-        ArrayList<Atleta> atletasOrdenados = new ArrayList<>(atletasInscritos);
+        ArrayList<Atleta> atletasOrdenados = new ArrayList<Atleta>(atletasInscritos);
         Collections.sort(atletasOrdenados);
         return atletasOrdenados;
     }
@@ -55,7 +55,7 @@ public class ClubeDesportivo {
     public double calcularValorTotalIRS(ArrayList<Atleta> getAtletasInscritos){
         double somaIRS = 0;
         for (Atleta atleta : getAtletasInscritos) {
-            somaIRS = somaIRS + atleta.calcularDescontoIrs();
+            somaIRS = somaIRS + atleta.calcularDescontoIRS();
         }
         return somaIRS;
     }
