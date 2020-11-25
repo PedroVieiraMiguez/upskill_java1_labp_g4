@@ -50,10 +50,20 @@ public class ClubeDesportivo {
         Collections.sort(atletasOrdenados);
         return atletasOrdenados;
     }
+    
+    
+    public double calcularValorTotalIRS(ArrayList<Atleta> getAtletasInscritos){
+        double somaIRS = 0;
+        for (Atleta atleta : getAtletasInscritos) {
+            somaIRS = somaIRS + atleta.calcularDescontoIrs();
+        }
+        return somaIRS;
+    }
 
+    
     @Override
     public String toString(){
         return String.format("Nome do clube: %s || Data de Fundação: %s%n", getNomeClube(), getDataFundacao());
-    }
+    }  
 
 }
