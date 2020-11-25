@@ -36,8 +36,12 @@ public class ClubeDesportivo {
     }
 
     public void addAtleta (Atleta a) {
-        atletasInscritos.add(a);
+        getAtletasInscritos().add(a);
     }
 
+
+    public ArrayList<Atleta> getAtletasInscritos() {
+        return atletasInscritos;
+    }
 
 }

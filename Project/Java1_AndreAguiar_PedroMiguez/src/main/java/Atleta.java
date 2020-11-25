@@ -1,3 +1,5 @@
+import com.sun.xml.internal.bind.v2.model.core.ID;
+
 public class Atleta {
 
     private String nome;
@@ -12,6 +14,7 @@ public class Atleta {
     private static final int IDADE_OMISSAO = 0;
     private static final double FCR_OMISSAO = 0;
     private static final double PREMIO_OMISSAO = 0;
+    private static final Genero GENERO_OMISSAO = Genero.MASCULINO;
 
     public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero) {
         this.nome = nome;
@@ -20,6 +23,15 @@ public class Atleta {
         this.freqCardRepouso = freqCardRepouso;
         this.premioAcumulado = premioAcumulado;
         this.setGenero(genero);
+    }
+
+    public Atleta(){
+        this.setNome(NOME_OMISSAO);
+        this.setNumIdCivil(NUMID_OMISSAO);
+        this.setIdade(IDADE_OMISSAO);
+        this.setFreqCardRepouso(FCR_OMISSAO);
+        this.setPremioAcumulado(PREMIO_OMISSAO);
+        this.setGenero(GENERO_OMISSAO);
     }
 
     public String getNome() {
