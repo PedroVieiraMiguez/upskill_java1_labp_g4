@@ -8,6 +8,7 @@ public class Atleta {
     private double freqCardRepouso;
     private double premioAcumulado;
     private Genero genero;
+    private Atividade atividade;
 
     private static final String NOME_OMISSAO = "Sem nome";
     private static final int NUMID_OMISSAO = 0;
@@ -16,13 +17,14 @@ public class Atleta {
     private static final double PREMIO_OMISSAO = 0;
     private static final Genero GENERO_OMISSAO = Genero.MASCULINO;
 
-    public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero) {
+    public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade) {
         this.nome = nome;
         this.numIdCivil = numIdCivil;
         this.idade = idade;
         this.freqCardRepouso = freqCardRepouso;
         this.premioAcumulado = premioAcumulado;
         this.setGenero(genero);
+        this.setAtividade(atividade);
     }
 
     public Atleta(){
@@ -80,5 +82,19 @@ public class Atleta {
 
     public void setGenero(Genero genero) {
         this.genero = genero;
+    }
+
+    /**
+     * @return the atividade
+     */
+    public Atividade getAtividade() {
+        return atividade;
+    }
+
+    /**
+     * @param atividade the atividade to set
+     */
+    public void setAtividade(Atividade atividade) {
+        this.atividade = atividade;
     }
 }

@@ -1,2 +1,3 @@
-public interface Atividade {
+public enum Atividade {
+    CAMINHADA, CORRIDA, CICLISMO, NATACAO, NAO_DEFINIDO
 }
