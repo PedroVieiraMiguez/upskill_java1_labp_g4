@@ -20,7 +20,7 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     }
 
     public double determinarParcela1() {
-        return getParcelaFixa();
+        return getParcelaFixa() - (getParcelaFixa() * getIRS());
     }
 
     public double determinarParcela2() {

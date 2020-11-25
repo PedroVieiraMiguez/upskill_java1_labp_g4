@@ -23,6 +23,8 @@ public abstract class Atleta {
     private static double QUEIMA_IT = 0.6;
     private static double CARDIO_IT = 0.75;
 
+    private static final double IRS = 0.1;
+
     public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, ObjectivoTreino objectivo) {
         this.nome = nome;
         this.numIdCivil = numIdCivil;
@@ -44,6 +46,10 @@ public abstract class Atleta {
         this.setAtividade(ATIVIDADE_OMISSAO);
         this.setObjectivoTreino(OBJECTIVO_TREINO_OMISSAO);
         
+    }
+
+    public static double getIRS() {
+        return IRS;
     }
 
     public String getNome() {
