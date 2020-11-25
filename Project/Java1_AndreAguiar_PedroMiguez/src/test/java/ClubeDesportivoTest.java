@@ -26,4 +26,27 @@ class ClubeDesportivoTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    void testGetSortedByName() {
+        AtletaAmador a1 = new AtletaAmador("João", 123, 20, 60, 100,
+                Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
+        AtletaAmador a2 = new AtletaAmador("Andrade", 123, 20, 60, 100,
+                Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
+        AtletaAmador a3 = new AtletaAmador("Zelda", 123, 20, 60, 100,
+                Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        test.addAtleta(a1);
+        test.addAtleta(a2);
+        test.addAtleta(a3);
+
+        ArrayList<Atleta> expected = new ArrayList<Atleta>();
+        expected.add(a2);
+        expected.add(a1);
+        expected.add(a3);
+
+        ArrayList<Atleta> result = test.getSortedByName();
+
+        assertArrayEquals(expected.toArray(), result.toArray());
+    }
 }

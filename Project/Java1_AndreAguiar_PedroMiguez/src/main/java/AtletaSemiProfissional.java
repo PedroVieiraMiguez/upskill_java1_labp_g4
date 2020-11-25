@@ -31,7 +31,7 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     }
     
     @Override
-    public double calcularDescontoIrs(){
+    public double calcularDescontoIRS(){
         return getParcelaFixa() * getIRS();
     }
 
