@@ -55,7 +55,7 @@ public class AtletaProfissional extends Atleta{
 
     @Override
     public double determinarParcela2() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return getPremioAcumulado() * percValorVar;
     }
     
     
