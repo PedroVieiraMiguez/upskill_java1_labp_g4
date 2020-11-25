@@ -20,4 +20,9 @@ public class AtletaAmador extends AtletaNaoProfissional{
     public double determinarParcela2() {
         return 0;
     }
+
+    @Override
+    public double calcularPagamento() {
+        return (determinarParcela1() + determinarParcela2()) < 5? 5 :super.calcularPagamento();
+    }
 }
