@@ -54,8 +54,9 @@ public class ClubeDesportivo {
     
     public double calcularValorTotalIRS(ArrayList<Atleta> getAtletasInscritos){
         double somaIRS = 0;
-        for (Atleta atleta : getAtletasInscritos) {
-            somaIRS = somaIRS + atleta.calcularDescontoIRS();
+
+        for (Atleta atleta : getAtletasInscritos()) {
+            somaIRS += atleta.calcularDescontoIRS();
         }
         return somaIRS;
     }
