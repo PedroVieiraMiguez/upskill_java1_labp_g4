@@ -66,7 +66,7 @@ public class AtletaAmador extends AtletaNaoProfissional{
     
     @Override
     public String toString(){
-        return String.format("Tipo de Atleta: %s%n%s", this.getClass(), super.toString());
+        return String.format("%s", super.toString());
     }
 
 }

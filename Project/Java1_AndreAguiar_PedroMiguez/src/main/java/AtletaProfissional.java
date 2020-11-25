@@ -76,7 +76,7 @@ public class AtletaProfissional extends Atleta{
     
     @Override
     public String toString(){
-        return String.format("Tipo de Atleta: %s%n%sValor de Rendimento Fixo: %.2f || ", this.getClass(), super.toString(), getValorFixo());
+        return String.format("%sValor de Rendimento Fixo: %.2f || ", super.toString(), getValorFixo());
     }
     
 }

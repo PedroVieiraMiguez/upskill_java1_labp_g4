@@ -196,10 +196,10 @@ public abstract class Atleta {
     
     @Override
     public String toString(){
-        return String.format("Nome: %s || Numero de Identificação Civil: %d || Idade: %d || Género: %s"
+        return String.format("Tipo de Atleta: %s%nNome: %s || Numero de Identificação Civil: %d || Idade: %d || Género: %s"
                 + "%nAtividade: %s || Objectivo de treino: %s || Frequência Cardíaca de Treino: %s%n"
                 + "Valor dos Prémios Mensal: %.2f || "
-                + "", getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
+                + "", this.getClass(), getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
 
 }

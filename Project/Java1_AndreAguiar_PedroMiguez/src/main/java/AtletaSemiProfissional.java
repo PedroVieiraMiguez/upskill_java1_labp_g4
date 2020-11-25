@@ -43,6 +43,6 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     
     @Override
     public String toString(){
-        return String.format("Tipo de Atleta: %s%n%sValor de Rendimento Fixo: %.2f || ", this.getClass(), super.toString(), getParcelaFixa());
+        return String.format("%sValor de Rendimento Fixo: %.2f || ", super.toString(), getParcelaFixa());
     }
 }
