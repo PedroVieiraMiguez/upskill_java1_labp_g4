@@ -55,12 +55,17 @@ public class AtletaProfissional extends Atleta{
 
     @Override
     public double determinarParcela1() {
-        return getValorFixo() - (getValorFixo() * getIRS());
+        return getValorFixo();
     }
 
     @Override
     public double determinarParcela2() {
         return getPremioAcumulado() * percValorVar;
+    }
+    
+    @Override
+    public double calcularDescontoIrs(){
+        return getValorFixo() * getIRS();
     }
 
     @Override

@@ -161,6 +161,8 @@ public abstract class Atleta implements Comparable<Atleta> {
     public abstract double determinarParcela1();
 
     public abstract double determinarParcela2();
+    
+    public abstract double calcularDescontoIrs();
 
     public double freqCardTrabalho(){
         return getFreqCardRepouso() + (determinarIT() * (freqCardMax() - getFreqCardRepouso()));
