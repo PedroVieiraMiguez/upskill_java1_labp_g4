@@ -193,5 +193,13 @@ public abstract class Atleta {
             return QUEIMA_IT;
         }
     }
+    
+    @Override
+    public String toString(){
+        return String.format("Nome: %s || Numero de Identificação Civil: %d || Idade: %d || Género: %s"
+                + "%nAtividade: %s || Objectivo de treino: %s || Frequência Cardíaca de Treino: %s%n"
+                + "Valor dos Prémios Mensal: %.2f || "
+                + "", getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
+    }
 
 }
