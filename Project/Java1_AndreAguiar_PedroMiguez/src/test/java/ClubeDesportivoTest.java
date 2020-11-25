@@ -9,7 +9,7 @@ class ClubeDesportivoTest {
     @org.junit.jupiter.api.Test
     void testAddAtleta() {
         ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
-        Atleta a1 = new Atleta();
+        AtletaAmador a1 = new AtletaAmador();
         int expected = 1;
         test.addAtleta(a1);
 

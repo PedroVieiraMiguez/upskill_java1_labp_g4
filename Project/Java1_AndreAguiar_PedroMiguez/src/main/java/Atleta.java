@@ -1,6 +1,6 @@
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
-public class Atleta {
+public abstract class Atleta {
 
     private String nome;
     private int numIdCivil;
@@ -105,6 +105,7 @@ public class Atleta {
         this.atividade = atividade;
     }
 
+
     /**
      * @return the objectivoTreino
      */
@@ -118,4 +119,13 @@ public class Atleta {
     public void setObjectivoTreino(ObjectivoTreino objectivoTreino) {
         this.objectivoTreino = objectivoTreino;
     }
+
+    public double calcularPagamento() {
+        return 0;
+    }
+
+    public abstract double determinarParcela1();
+
+    public abstract double determinarParcela2();
+
 }
