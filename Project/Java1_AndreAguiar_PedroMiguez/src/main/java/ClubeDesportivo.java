@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ClubeDesportivo {
     private String nomeClube;
     private String dataFundacao;
-    private ArrayList<Atleta> atletasInscritos;
+    private ArrayList<Atleta> atletasInscritos = new ArrayList<Atleta>();
 
     private static final String NOME_OMISSAO = "Sem nome";
     private static final String DATA_OMISSAO = "Sem data de fundação";
