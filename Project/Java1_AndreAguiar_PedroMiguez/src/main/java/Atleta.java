@@ -136,7 +136,7 @@ public abstract class Atleta {
     public abstract double determinarParcela2();
 
     public double freqCardTrabalho(){
-        return 0;
+        return getFreqCardRepouso() + (determinarIT() * (freqCardMax() - getFreqCardRepouso()));
     }
 
     public double freqCardMax(){
