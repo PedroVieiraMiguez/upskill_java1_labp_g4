@@ -13,7 +13,7 @@ public class ClubeDesportivo {
     private static final String DATA_OMISSAO = "Sem data de fundação";
 
 
-    public ClubeDesportivo(String nomeClube, String dataFundacao,ArrayList<Atleta> atletasInscritos ) {
+    public ClubeDesportivo(String nomeClube, String dataFundacao, ArrayList<Atleta> atletasInscritos ) {
         this.setNomeClube(nomeClube);
         this.setDataFundacao(dataFundacao);
         this.atletasInscritos = atletasInscritos;
