@@ -12,7 +12,7 @@ import java.util.Objects;
  * training objective, rest heart rate value, and total monthly prize)
  * It has implementations for retriving or calculate several output values and parameters, such as
  * work heart rate, max heart rate, work training index, club payment value for the athete,
- * total monthly prize after adding a new prize value, IRS tax value and to get all information about the Atleta through toString method.
+ * total monthly prize after adding a new prize value, IRS tax value and to get all information about the Atleta through toString() method.
  */
 public abstract class Atleta implements Comparable<Atleta> {
 
@@ -256,8 +256,8 @@ public abstract class Atleta implements Comparable<Atleta> {
     /**
      * 
      * @return the final value for the Atleta payment, considering the sum of the two parcels (determinarParcela1() + determinarParcela2())
-     * @see determinarParcela1()
-     * @see determinarParcela2()
+     * @see {@link #determinarParcela1()}
+     * @see {@link #determinarParcela2()}
      */
     public double calcularPagamento() {
         return determinarParcela1() + determinarParcela2();
@@ -265,20 +265,20 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      * @return value for parcel 1 out of 2 for the Atleta payment calculation
-     * @see determinarParcela1() implementation in subclasses
+     * @see {@link #determinarParcela1()} implementation in subclasses
      */
     public abstract double determinarParcela1();
 
     /**
      * @return value for parcel 2 out of 2 for the Atleta payment calculation
-     * @see determinarParcela2() implementation in subclasses
+     * @see {@link #determinarParcela2()} implementation in subclasses
      */
     public abstract double determinarParcela2();
     
     /**
      * @return IRS tax value according with the value for Atleta payment.
      * This tax only applies on top of value of payment's fixed parcels
-     * @see calcularDescontoIRS() implementation in subclasses
+     * @see {@link #calcularDescontoIRS()} implementation in subclasses
      */
     public abstract double calcularDescontoIRS();
 
@@ -286,9 +286,9 @@ public abstract class Atleta implements Comparable<Atleta> {
      *
      * @return the value for Frequência Cardíaca de Trabalho (work heart rate), considering the following formulla
      * FCT = FCR + [IT * (FCM - FCR)]
-     * @see getFreqCardRepouso()
-     * @see determinarIT()
-     * @see freqCardMax()
+     * @see {@link #getFreqCardRepouso()}
+     * @see {@link #determinarIT()}
+     * @see {@link #freqCardMax()}
      */
     public double freqCardTrabalho(){
         return getFreqCardRepouso() + (determinarIT() * (freqCardMax() - getFreqCardRepouso()));
@@ -297,9 +297,9 @@ public abstract class Atleta implements Comparable<Atleta> {
     /**
      *
      * @return the Frequência Cardíaca Máxima (max heart rate) considering the activity, gender and age of the athlete (Atleta)
-     * @see getGenero()
-     * @see getIdade()
-     * @see getAtividade()
+     * @see {@link #getGenero()}
+     * @see {@link #getIdade()}
+     * @see {@link #getAtividade()}
      */
     public double freqCardMax(){
         if (this.atividade == Atividade.CAMINHADA || this.atividade == Atividade.CORRIDA){
@@ -323,7 +323,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     /**
      *
      * @return value for Intensidade de Treino (training intensity) according with the training objective (Objectivio de Treino)
-     * @see getObjectivoTreino()
+     * @see {@link #getObjectivoTreino()}
      */
     public double determinarIT(){
         if (this.objectivoTreino == ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA){
@@ -350,7 +350,7 @@ public abstract class Atleta implements Comparable<Atleta> {
                 + "", this.getClass(), getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
 
-/**
+    /**
      * Compares this object with the specified object for order.  
      *
      * @param   a the object to be compared.
