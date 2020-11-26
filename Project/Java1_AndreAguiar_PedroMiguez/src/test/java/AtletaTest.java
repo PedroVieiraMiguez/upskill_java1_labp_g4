@@ -23,7 +23,7 @@ class AtletaTest {
         double expected = 100 * 0.2 + 100 * 0.07;
         double result = a1.calcularPagamento();
 
-        assertEquals(expected, result);
+        assertEquals(expected, result, 0.0);
     }
 
     @Test
@@ -43,7 +43,7 @@ class AtletaTest {
         double expected = 100 + (100 * 0.2);
         double result = a1.calcularPagamento();
 
-        assertEquals(expected, result);
+        assertEquals(expected, result, 0.0);
     }
 
     @Test
@@ -53,7 +53,7 @@ class AtletaTest {
         double expected = 100+ (100 * 0.08);
         double result = a1.calcularPagamento();
 
-        assertEquals(expected, result);
+        assertEquals(expected, result, 0.0);
     }
 
     @Test
@@ -93,7 +93,7 @@ class AtletaTest {
         double expected = 60 + (0.6 * ((208.75 - (0.73 * 20)) - 60));
         double result = a1.freqCardTrabalho();
 
-        assertEquals(expected, result);
+        assertEquals(expected, result, 0.0);
     }
 
     @Test
@@ -113,7 +113,7 @@ class AtletaTest {
         double expected = 208.75 - (0.73 * 20);
         double result = a1.freqCardMax();
 
-        assertEquals(expected, result);
+        assertEquals(expected, result, 0.0);
     }
 
     @Test
@@ -123,7 +123,7 @@ class AtletaTest {
         double expected = 0.6;
         double result = a1.determinarIT();
 
-        assertEquals(expected, result);
+        assertEquals(expected, result, 0.0);
 
     }
 
