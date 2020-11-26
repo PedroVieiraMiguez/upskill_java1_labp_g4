@@ -65,7 +65,7 @@ public class AtletaProfissional extends Atleta{
         return getPremioAcumulado() * percValorVar;
     }
     
-    @Override
+
     public double calcularDescontoIRS(){
         return getValorFixo() * getIRS();
     }

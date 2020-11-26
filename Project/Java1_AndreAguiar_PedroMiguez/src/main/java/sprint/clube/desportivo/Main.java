@@ -124,11 +124,7 @@ public class Main {
         System.out.println();
 
         System.out.println("#### - Valor total a pagar para efeitos de IRS - ###");
-        double taxTotal = 0;
-        for (Atleta a : cb1.getAtletasInscritos()) {
-            taxTotal += a.calcularDescontoIRS();
-        }
-        System.out.printf("Valor total do IRS: %.2f", taxTotal);
+        System.out.printf("Valor total do IRS: %.2f", cb1.calcularValorTotalIRS(cb1.getAtletasInscritos()));
     }
 
     public static void printArrayList(ArrayList<Atleta> arrayList) {

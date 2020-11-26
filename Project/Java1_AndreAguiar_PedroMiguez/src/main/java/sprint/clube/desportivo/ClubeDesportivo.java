@@ -72,7 +72,11 @@ public class ClubeDesportivo {
         double somaIRS = 0;
 
         for (Atleta atleta : getAtletasInscritos()) {
-            somaIRS += atleta.calcularDescontoIRS();
+            if (atleta instanceof AtletaSemiProfissional) {
+                somaIRS += ((AtletaSemiProfissional)atleta).calcularDescontoIRS();
+            } else if (atleta instanceof AtletaProfissional) {
+                somaIRS += ((AtletaProfissional) atleta).calcularDescontoIRS();
+            }
         }
         return somaIRS;
     }

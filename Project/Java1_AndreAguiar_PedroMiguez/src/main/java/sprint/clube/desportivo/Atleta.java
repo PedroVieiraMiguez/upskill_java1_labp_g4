@@ -274,13 +274,7 @@ public abstract class Atleta implements Comparable<Atleta> {
      * see {@link #determinarParcela2()} implementation in subclasses
      */
     public abstract double determinarParcela2();
-    
-    /**
-     * @return IRS tax value according with the value for Atleta payment.
-     * This tax only applies on top of value of payment's fixed parcels
-     * see {@link #calcularDescontoIRS()} implementation in subclasses
-     */
-    public abstract double calcularDescontoIRS();
+
 
     /**
      *

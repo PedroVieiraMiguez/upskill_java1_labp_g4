@@ -46,19 +46,13 @@ public class AtletaAmador extends AtletaNaoProfissional{
     public double calcularPagamento() {
         return super.calcularPagamento() < valorMinimo? valorMinimo : super.calcularPagamento();
     }
-    
-    @Override
-    public double calcularDescontoIRS(){
-        return 0;
-    }
 
-    
+
     @Override
     public String toString(){
         return String.format("%s", super.toString());
     }
-    
-    
+
     public static int getTotalAtletasAmador(){
         return totalAtletasAmador;
     } 
