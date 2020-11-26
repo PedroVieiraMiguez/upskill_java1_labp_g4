@@ -13,6 +13,7 @@ import java.util.Objects;
  * It has implementations for retriving or calculate several output values and parameters, such as
  * work heart rate, max heart rate, work training index, club payment value for the athete,
  * total monthly prize after adding a new prize value, IRS tax value and to get all information about the Atleta through toString() method.
+ * 
  */
 public abstract class Atleta implements Comparable<Atleta> {
 
