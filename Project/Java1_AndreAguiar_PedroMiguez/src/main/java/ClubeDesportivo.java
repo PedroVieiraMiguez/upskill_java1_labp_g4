@@ -56,6 +56,12 @@ public class ClubeDesportivo {
         atletasOrdenados.sort(new SortByPremioReversedComparator());
         return atletasOrdenados;
     }
+
+    public ArrayList<Atleta> getSortedByTypeThenActivityThenName() {
+        ArrayList<Atleta> atletasOrdenados = new ArrayList<Atleta>(atletasInscritos);
+        atletasOrdenados.sort(new SortByTypeThenActivityThenName());
+        return atletasOrdenados;
+    }
     
     
     public double calcularValorTotalIRS(ArrayList<Atleta> getAtletasInscritos){
