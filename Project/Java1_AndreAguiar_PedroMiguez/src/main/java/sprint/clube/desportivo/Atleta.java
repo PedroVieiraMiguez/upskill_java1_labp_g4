@@ -256,8 +256,8 @@ public abstract class Atleta implements Comparable<Atleta> {
     /**
      * 
      * @return the final value for the Atleta payment, considering the sum of the two parcels (determinarParcela1() + determinarParcela2())
-     * @see {@link #determinarParcela1()}
-     * @see {@link #determinarParcela2()}
+     * see {@link #determinarParcela1()}
+     * see {@link #determinarParcela2()}
      */
     public double calcularPagamento() {
         return determinarParcela1() + determinarParcela2();
@@ -265,20 +265,20 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      * @return value for parcel 1 out of 2 for the Atleta payment calculation
-     * @see {@link #determinarParcela1()} implementation in subclasses
+     * see {@link #determinarParcela1()} implementation in subclasses
      */
     public abstract double determinarParcela1();
 
     /**
      * @return value for parcel 2 out of 2 for the Atleta payment calculation
-     * @see {@link #determinarParcela2()} implementation in subclasses
+     * see {@link #determinarParcela2()} implementation in subclasses
      */
     public abstract double determinarParcela2();
     
     /**
      * @return IRS tax value according with the value for Atleta payment.
      * This tax only applies on top of value of payment's fixed parcels
-     * @see {@link #calcularDescontoIRS()} implementation in subclasses
+     * see {@link #calcularDescontoIRS()} implementation in subclasses
      */
     public abstract double calcularDescontoIRS();
 
@@ -286,9 +286,9 @@ public abstract class Atleta implements Comparable<Atleta> {
      *
      * @return the value for Frequ�ncia Card�aca de Trabalho (work heart rate), considering the following formulla
      * FCT = FCR + [IT * (FCM - FCR)]
-     * @see {@link #getFreqCardRepouso()}
-     * @see {@link #determinarIT()}
-     * @see {@link #freqCardMax()}
+     * see {@link #getFreqCardRepouso()}
+     * see {@link #determinarIT()}
+     * see {@link #freqCardMax()}
      */
     public double freqCardTrabalho(){
         return getFreqCardRepouso() + (determinarIT() * (freqCardMax() - getFreqCardRepouso()));
@@ -298,9 +298,9 @@ public abstract class Atleta implements Comparable<Atleta> {
      *
      *
      * @return the Frequ�ncia Card�aca M�xima (max heart rate) considering the activity, gender and age of the athlete (Atleta)
-     * @see {@link #getGenero()}
-     * @see {@link #getIdade()}
-     * @see {@link #getAtividade()}
+     * see {@link #getGenero()}
+     * see {@link #getIdade()}
+     * see {@link #getAtividade()}
      */
     public double freqCardMax(){
         if (this.atividade == Atividade.CAMINHADA || this.atividade == Atividade.CORRIDA){
