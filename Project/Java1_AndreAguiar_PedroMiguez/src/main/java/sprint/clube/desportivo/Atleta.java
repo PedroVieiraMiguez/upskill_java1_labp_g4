@@ -2,6 +2,18 @@ package sprint.clube.desportivo;
 
 import java.util.Objects;
 
+/**
+ *
+ * @author Java1 - grupo4
+ * 
+ * Current class implements the tool for creating new athletes (as Atleta) accordingly with 3 types of athletes
+ * (Profissional, Semi-Profissional e Amador, the last two being Não Profissionais) and with specific information for each
+ * (such as name, Civil number identification, age in years, gender, associated activity for training,
+ * training objective, rest heart rate value, and total monthly prize)
+ * It has implementations for retriving or calculate several output values and parameters, such as
+ * work heart rate, max heart rate, work training index, club payment value for the athete,
+ * total monthly prize after adding a new prize value, IRS tax value and to get all information about the Atleta through toString method.
+ */
 public abstract class Atleta implements Comparable<Atleta> {
 
     private String nome;
@@ -27,6 +39,18 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     private static final double IRS = 0.1;
 
+    /**
+     * Initializes a new instance with set parameters.
+     * 
+     * @param nome
+     * @param numIdCivil
+     * @param idade
+     * @param freqCardRepouso
+     * @param premioAcumulado
+     * @param genero
+     * @param atividade
+     * @param objectivo
+     */
     public Atleta(String nome, int numIdCivil, int idade, double freqCardRepouso, double premioAcumulado, Genero genero, Atividade atividade, ObjectivoTreino objectivo) {
         this.nome = nome;
         this.numIdCivil = numIdCivil;
@@ -37,7 +61,11 @@ public abstract class Atleta implements Comparable<Atleta> {
         this.setAtividade(atividade);
         this.setObjectivoTreino(objectivo);
     }
-
+    
+    /**
+     * Initializes a new instance with default values.
+     *
+     */
     public Atleta(){
         this.setNome(NOME_OMISSAO);
         this.setNumIdCivil(NUMID_OMISSAO);
@@ -50,71 +78,133 @@ public abstract class Atleta implements Comparable<Atleta> {
         
     }
 
+    /**
+     *
+     * @return IRS constant value (@param IRS).
+     */
     public static double getIRS() {
         return IRS;
     }
 
+    /**
+     *
+     * @return name for a given Atleta (nome as a String, first name or first and last names)
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     *
+     * @param nome sets the name for a given Atleta (nome as a String, first name or first and last names) 
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     *
+     * @return Número de Identidicação Civil for a given Atleta (numIdCivil as an int, composed by 7 to 9 digits).
+     */
     public int getNumIdCivil() {
         return numIdCivil;
     }
 
+    /**
+     *
+     * @param numIdCivil sets the Número de Identidicação Civil for a given Atleta
+     * (numIdCivil as an int, composed by 7 to 9 digits)
+     */
     public void setNumIdCivil(int numIdCivil) {
         this.numIdCivil = numIdCivil;
     }
 
+    /**
+     *
+     * @return Idade for a given Atleta (idade as an int given in years and greater than 0)
+     */
     public int getIdade() {
         return idade;
     }
 
+    /**
+     *
+     * @param idade sets the idade for a given Atleta (idade as an int given in years and greater than 0)
+     */
     public void setIdade(int idade) {
         this.idade = idade;
     }
 
+    /**
+     *
+     * @return Frequência Cardíaca em Repouso for a given Atleta (freqCardRepouso as a double, value between 0 and 200)
+     */
     public double getFreqCardRepouso() {
         return freqCardRepouso;
     }
 
+    /**
+     *
+     * @param freqCardRepouso sets the Frequência Cardíaca em Repouso for a given Atleta
+     * (freqCardRepouso as a double, value between 0 and 200)
+     */
     public void setFreqCardRepouso(double freqCardRepouso) {
         this.freqCardRepouso = freqCardRepouso;
     }
 
+    /**
+     *
+     * @return premioAcumulado for a given Atleta
+     * (premioAcumulado as a double, total monthly value for competition prizes of an Atleta) 
+     */
     public double getPremioAcumulado() {
         return premioAcumulado;
     }
 
+    /**
+     *
+     * @param premioAcumulado sets the premioAcumulado for a given Atleta
+     * (premioAcumulado as a double, total monthly value for competition prizes of an Atleta)
+     */
     public void setPremioAcumulado(double premioAcumulado) {
         this.premioAcumulado = premioAcumulado;
     }
 
+    /**
+     *
+     * @param valor gives the new value for premioAcumulado by adding an additional prize value (valor) to the previous premioAcumulado value.
+     */
     public void addPremio(double valor){
         setPremioAcumulado(getPremioAcumulado() + valor);
     }
 
+    /**
+     *
+     * @return genero as String for a given Atleta (can be MASCULINO or FEMININO).
+     */
     public String getGenero() {
         return genero.toString();
     }
 
+    /**
+     *
+     * @param genero sets genero for a given Atleta (can be MASCULINO or FEMININO).
+     */
     public void setGenero(Genero genero) {
         this.genero = genero;
     }
 
     /**
-     * @return the atividade
+     * 
+     * @return atividade as a String for a given Atleta (can be CAMINHADA, CORRIDA, CICLISMO or NATACAO).
      */
     public String getAtividade() {
         return atividade.toString();
     }
 
     /**
-     * @param atividade the atividade to set
+     * 
+     * @param atividade sets the atividade for a given Atleta (can be CAMINHADA, CORRIDA, CICLISMO or NATACAO).
      */
     public void setAtividade(Atividade atividade) {
         this.atividade = atividade;
@@ -122,19 +212,31 @@ public abstract class Atleta implements Comparable<Atleta> {
 
 
     /**
-     * @return the objectivoTreino
+     * 
+     * @return objectivoTreino (as String) for a given Atleta (can be QUEIMA_GORDURA or CAPACIDADE_CARDIORESPIRATORIA)
      */
     public String getObjectivoTreino() {
         return objectivoTreino.toString();
     }
 
     /**
-     * @param objectivoTreino the objectivoTreino to set
+     * 
+     * @param objectivoTreino sets the objectivoTreino for a given Atleta (can be QUEIMA_GORDURA or CAPACIDADE_CARDIORESPIRATORIA)
      */
     public void setObjectivoTreino(ObjectivoTreino objectivoTreino) {
         this.objectivoTreino = objectivoTreino;
     }
 
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     * <p>
+     * The {@code equals} method implements an equivalence relation
+     * on non-null object references:
+     * 
+     * @param   o   the reference object with which to compare.
+     * @return  {@code true} if this object is the same as the obj
+     *          argument; {@code false} otherwise.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -149,22 +251,48 @@ public abstract class Atleta implements Comparable<Atleta> {
                 getAtividade() == atleta.getAtividade() &&
                 getObjectivoTreino() == atleta.getObjectivoTreino();
     }
+    
 
-
+    /**
+     * 
+     * @return the final value for the Atleta payment, considering the sum of the two parcels (determinarParcela1() + determinarParcela2())
+     * @see determinarParcela1()
+     * @see determinarParcela2()
+     */
     public double calcularPagamento() {
         return determinarParcela1() + determinarParcela2();
     }
 
+    /**
+     *
+     * @see determinarParcela1() implementation in subclasses
+     */
     public abstract double determinarParcela1();
 
+    /**
+     *
+     * @see determinarParcela2() implementation in subclasses
+     */
     public abstract double determinarParcela2();
     
+    /**
+     *
+     * @see calcularDescontoIRS() implementation in subclasses
+     */
     public abstract double calcularDescontoIRS();
 
+    /**
+     *
+     * @return
+     */
     public double freqCardTrabalho(){
         return getFreqCardRepouso() + (determinarIT() * (freqCardMax() - getFreqCardRepouso()));
     }
 
+    /**
+     *
+     * @return
+     */
     public double freqCardMax(){
         if (this.atividade == Atividade.CAMINHADA || this.atividade == Atividade.CORRIDA){
             return 208.75 - (0.73 * getIdade());
@@ -184,6 +312,10 @@ public abstract class Atleta implements Comparable<Atleta> {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public double determinarIT(){
         if (this.objectivoTreino == ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA){
             return CARDIO_IT;
@@ -193,6 +325,10 @@ public abstract class Atleta implements Comparable<Atleta> {
         }
     }
     
+    /**
+     * 
+     * @return true if 
+     */
     @Override
     public String toString(){
         return String.format("Tipo de sprint.clube.desportivo.Atleta: %s%nNome: %s || Numero de Identificaï¿½ï¿½o Civil: %d || Idade: %d || Gï¿½nero: %s"
@@ -201,6 +337,10 @@ public abstract class Atleta implements Comparable<Atleta> {
                 + "", this.getClass(), getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
 
+    /**
+     * 
+     * @return true if 
+     */
     @Override
     public int compareTo(Atleta a) {
         return this.getNome().compareToIgnoreCase(a.getNome());
