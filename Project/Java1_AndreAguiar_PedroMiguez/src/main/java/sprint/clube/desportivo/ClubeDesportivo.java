@@ -6,15 +6,16 @@ import java.util.Collections;
 public class ClubeDesportivo {
     private String nomeClube;
     private String dataFundacao;
-    private ArrayList<Atleta> atletasInscritos = new ArrayList<Atleta>();
+    private ArrayList<Atleta> atletasInscritos;
 
     private static final String NOME_OMISSAO = "Sem nome";
     private static final String DATA_OMISSAO = "Sem data de fundação";
 
 
-    public ClubeDesportivo(String nomeClube, String dataFundacao) {
+    public ClubeDesportivo(String nomeClube, String dataFundacao,ArrayList<Atleta> atletasInscritos ) {
         this.setNomeClube(nomeClube);
         this.setDataFundacao(dataFundacao);
+        this.atletasInscritos = atletasInscritos;
     }
 
     public ClubeDesportivo() {

@@ -9,7 +9,7 @@ class ClubeDesportivoTest {
 
     @Test
     void testAddAtleta() {
-        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
         AtletaAmador a1 = new AtletaAmador();
         int expected = 1;
         test.addAtleta(a1);
@@ -21,7 +21,7 @@ class ClubeDesportivoTest {
 
     @Test
     void testGetNomeClube() {
-        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
         String expected = "Sitio";
         String result = test.getNomeClube();
 
@@ -36,7 +36,7 @@ class ClubeDesportivoTest {
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         AtletaAmador a3 = new AtletaAmador("Zelda", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
-        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
         test.addAtleta(a1);
         test.addAtleta(a2);
         test.addAtleta(a3);
@@ -59,7 +59,7 @@ class ClubeDesportivoTest {
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         AtletaAmador a3 = new AtletaAmador("Zelda", 123, 20, 60, 101,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
-        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
         test.addAtleta(a3);
         test.addAtleta(a2);
         test.addAtleta(a1);
@@ -86,7 +86,7 @@ class ClubeDesportivoTest {
                 Genero.MASCULINO, Atividade.NATACAO, ObjectivoTreino.QUEIMA_GORDURA, 100);
         AtletaSemiProfissional a5 = new AtletaSemiProfissional("Velda", 123, 20, 60, 101,
                 Genero.MASCULINO, Atividade.NATACAO, ObjectivoTreino.QUEIMA_GORDURA, 100);
-        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
         test.addAtleta(a3);
         test.addAtleta(a2);
         test.addAtleta(a1);
@@ -114,7 +114,7 @@ class ClubeDesportivoTest {
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 1500);
         AtletaSemiProfissional a3 = new AtletaSemiProfissional("Zelda", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
-        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem");
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
         test.addAtleta(a1);
         test.addAtleta(a2);
         test.addAtleta(a3);
