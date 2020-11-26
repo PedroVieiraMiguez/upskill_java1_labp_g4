@@ -30,7 +30,7 @@ class ClubeDesportivoTest {
 
     @Test
     void testGetSortedByName() {
-        AtletaAmador a1 = new AtletaAmador("Jo�o", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Joana", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         AtletaAmador a2 = new AtletaAmador("Andrade", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
@@ -53,7 +53,7 @@ class ClubeDesportivoTest {
 
     @Test
     void testGetReverseSortedByPremio() {
-        AtletaAmador a1 = new AtletaAmador("João", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Joana", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         AtletaAmador a2 = new AtletaAmador("Andrade", 123, 20, 60, 99,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
@@ -76,7 +76,7 @@ class ClubeDesportivoTest {
 
     @Test
     void testGetSortedByTypeThenActivityThenName() {
-        AtletaAmador a1 = new AtletaAmador("João", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Joana", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CICLISMO, ObjectivoTreino.QUEIMA_GORDURA, 21);
         AtletaAmador a2 = new AtletaAmador("Andrade", 123, 20, 60, 99,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
@@ -108,7 +108,7 @@ class ClubeDesportivoTest {
     
     @Test
     void testCalcularValorTotalIRS(){
-        AtletaAmador a1 = new AtletaAmador("Jo�o", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Joana", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         AtletaProfissional a2 = new AtletaProfissional("Andrade", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 1500);

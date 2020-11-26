@@ -52,14 +52,6 @@ public class AtletaAmador extends AtletaNaoProfissional{
         return 0;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        AtletaAmador that = (AtletaAmador) o;
-        return getAntiguidade() == that.getAntiguidade();
-    }
     
     @Override
     public String toString(){

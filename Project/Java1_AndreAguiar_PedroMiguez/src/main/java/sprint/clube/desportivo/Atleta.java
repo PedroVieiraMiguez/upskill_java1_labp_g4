@@ -150,10 +150,6 @@ public abstract class Atleta implements Comparable<Atleta> {
                 getObjectivoTreino() == atleta.getObjectivoTreino();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getNome(), getNumIdCivil(), getIdade(), getFreqCardRepouso(), getPremioAcumulado(), getGenero(), getAtividade(), getObjectivoTreino());
-    }
 
     public double calcularPagamento() {
         return determinarParcela1() + determinarParcela2();

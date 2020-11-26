@@ -36,12 +36,6 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional {
     public double calcularDescontoIRS(){
         return getParcelaFixa() * getIRS();
     }
-
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-    
     
     @Override
     public String toString(){
