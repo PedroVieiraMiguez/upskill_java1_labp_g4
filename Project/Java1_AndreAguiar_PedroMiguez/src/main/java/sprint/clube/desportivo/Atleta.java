@@ -264,26 +264,31 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     * @return value for parcel 1 out of 2 for the Atleta payment calculation
      * @see determinarParcela1() implementation in subclasses
      */
     public abstract double determinarParcela1();
 
     /**
-     *
+     * @return value for parcel 2 out of 2 for the Atleta payment calculation
      * @see determinarParcela2() implementation in subclasses
      */
     public abstract double determinarParcela2();
     
     /**
-     *
+     * @return IRS tax value according with the value for Atleta payment.
+     * This tax only applies on top of value of payment's fixed parcels
      * @see calcularDescontoIRS() implementation in subclasses
      */
     public abstract double calcularDescontoIRS();
 
     /**
      *
-     * @return
+     * @return the value for Frequência Cardíaca de Trabalho (work heart rate), considering the following formulla
+     * FCT = FCR + [IT * (FCM - FCR)]
+     * @see getFreqCardRepouso()
+     * @see determinarIT()
+     * @see freqCardMax()
      */
     public double freqCardTrabalho(){
         return getFreqCardRepouso() + (determinarIT() * (freqCardMax() - getFreqCardRepouso()));
@@ -291,7 +296,10 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @return
+     * @return the Frequência Cardíaca Máxima (max heart rate) considering the activity, gender and age of the athlete (Atleta)
+     * @see getGenero()
+     * @see getIdade()
+     * @see getAtividade()
      */
     public double freqCardMax(){
         if (this.atividade == Atividade.CAMINHADA || this.atividade == Atividade.CORRIDA){
@@ -314,7 +322,8 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @return
+     * @return value for Intensidade de Treino (training intensity) according with the training objective (Objectivio de Treino)
+     * @see getObjectivoTreino()
      */
     public double determinarIT(){
         if (this.objectivoTreino == ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA){
@@ -326,8 +335,12 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     * 
-     * @return true if 
+     * Returns a string representation of the object Atleta and its attributes.
+     * The result should be a concise but informative representation that is easy
+     * for a person to read.
+     * It is overriden by all subclasses.
+     *
+     * @return  a string representation of the object.
      */
     @Override
     public String toString(){
@@ -337,9 +350,13 @@ public abstract class Atleta implements Comparable<Atleta> {
                 + "", this.getClass(), getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
 
-    /**
-     * 
-     * @return true if 
+/**
+     * Compares this object with the specified object for order.  
+     *
+     * @param   a the object to be compared.
+     * @return  a negative integer, zero, or a positive integer as this object
+     *          is less than, equal to, or greater than the specified object.
+     *
      */
     @Override
     public int compareTo(Atleta a) {
