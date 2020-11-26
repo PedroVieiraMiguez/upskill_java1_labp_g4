@@ -12,7 +12,7 @@ public class SortByPremioReversedComparator implements Comparator<Atleta> {
             return -1;
         } else {
             return 0;
-            //Alternativa -> return Double.compare(o1.getPremioAcumulado(), o2.getPremioAcumulado());
+            //Alternativa -> return Double.compare(o2.getPremioAcumulado(), o1.getPremioAcumulado());
         }
     }
 }
