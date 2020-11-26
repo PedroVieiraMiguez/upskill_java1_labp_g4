@@ -1,4 +1,4 @@
-import java.util.Objects;
+package sprint.clube.desportivo;
 
 public abstract class AtletaNaoProfissional extends Atleta {
 

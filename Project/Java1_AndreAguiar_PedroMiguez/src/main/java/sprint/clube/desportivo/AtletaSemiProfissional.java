@@ -1,3 +1,5 @@
+package sprint.clube.desportivo;
+
 public class AtletaSemiProfissional extends AtletaNaoProfissional {
 
     private static double parcelaFixa = 100;

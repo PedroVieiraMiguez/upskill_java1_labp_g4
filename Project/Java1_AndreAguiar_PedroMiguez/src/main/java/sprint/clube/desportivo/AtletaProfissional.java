@@ -1,3 +1,5 @@
+package sprint.clube.desportivo;
+
 import java.util.Objects;
 
 public class AtletaProfissional extends Atleta{

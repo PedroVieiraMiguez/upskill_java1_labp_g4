@@ -1,3 +1,5 @@
+package sprint.clube.desportivo;
+
 import java.util.Comparator;
 
 public class SortByTypeThenActivityThenName implements Comparator<Atleta> {

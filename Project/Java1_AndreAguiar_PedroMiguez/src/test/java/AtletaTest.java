@@ -1,5 +1,6 @@
 
 import org.junit.jupiter.api.Test;
+import sprint.clube.desportivo.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 

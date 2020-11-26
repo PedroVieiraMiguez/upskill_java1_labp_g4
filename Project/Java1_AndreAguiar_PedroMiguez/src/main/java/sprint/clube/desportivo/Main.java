@@ -1,3 +1,5 @@
+package sprint.clube.desportivo;
+
 import java.util.ArrayList;
 
 public class Main {
