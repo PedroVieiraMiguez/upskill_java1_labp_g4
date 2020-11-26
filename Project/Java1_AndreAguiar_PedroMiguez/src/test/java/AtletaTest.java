@@ -17,7 +17,7 @@ class AtletaTest {
 
     @Test
     void testCalcularPagamentoAmador() {
-        AtletaAmador a1 = new AtletaAmador("Jo√£o", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Jo„o", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         double expected = 100 * 0.2 + 100 * 0.07;
         double result = a1.calcularPagamento();
@@ -27,7 +27,7 @@ class AtletaTest {
 
     @Test
     void testCalcularPagamentoProfissional() {
-        AtletaProfissional a1 = new AtletaProfissional("Jo√£o", 123, 20, 60, 100,
+        AtletaProfissional a1 = new AtletaProfissional("Jo„o", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 100);
         double expected = 100 + (100 * 0.2);
         double result = a1.calcularPagamento();
@@ -37,7 +37,7 @@ class AtletaTest {
 
     @Test
     void testCalcularPagamentoSemiProfissional() {
-        AtletaSemiProfissional a1 = new AtletaSemiProfissional("Jo√£o", 123, 20, 60, 100,
+        AtletaSemiProfissional a1 = new AtletaSemiProfissional("Jo„o", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 15);
         double expected = 100+ (100 * 0.08);
         double result = a1.calcularPagamento();
@@ -47,7 +47,7 @@ class AtletaTest {
 
     @Test
     void testFreqCardTrabalho() {
-        AtletaAmador a1 = new AtletaAmador("Jo√£o", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Jo„o", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         double expected = 60 + (0.6 * ((208.75 - (0.73 * 20)) - 60));
         double result = a1.freqCardTrabalho();
@@ -57,7 +57,7 @@ class AtletaTest {
 
     @Test
     void testFreqCardMax() {
-        AtletaAmador a1 = new AtletaAmador("Jo√£o", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Jo„o", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         double expected = 208.75 - (0.73 * 20);
         double result = a1.freqCardMax();
@@ -67,7 +67,7 @@ class AtletaTest {
 
     @Test
     void testDeterminarIT() {
-        AtletaAmador a1 = new AtletaAmador("Jo√£o", 123, 20, 60, 100,
+        AtletaAmador a1 = new AtletaAmador("Jo„o", 123, 20, 60, 100,
                 Genero.MASCULINO, Atividade.CAMINHADA, ObjectivoTreino.QUEIMA_GORDURA, 21);
         double expected = 0.6;
         double result = a1.determinarIT();

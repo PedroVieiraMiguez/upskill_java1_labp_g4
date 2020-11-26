@@ -20,6 +20,7 @@
 *.rar
 *.idea
 *.DS_Store
+*.iml
 
 #netbeans specific
 core
@@ -35,5 +36,7 @@ Implementação/.DS_Store
 Implementação/Java1_PedroMiguez_AndreAguiar/.DS_Store
 Levantamento de Requisitos e Análise OO/.DS_Store
 .DS_Store
+/Project/Java1_AndreAguiar_PedroMiguez/target/
 *.xml
 *.iml
+Project/Java1_AndreAguiar_PedroMiguez/pom.xml
