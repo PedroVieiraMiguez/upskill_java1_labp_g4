@@ -126,4 +126,22 @@ class ClubeDesportivoTest {
         assertEquals(expectedResult, result);
     }
 
+    @Test
+    void testEqualsTrue(){
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
+        ClubeDesportivo test2 = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
+
+        assertEquals(test2, test);
+    }
+
+    @Test
+    void testEqualsFalse(){
+        ClubeDesportivo test = new ClubeDesportivo("Sitio", "Ontem", new ArrayList<Atleta>());
+        ClubeDesportivo test2 = new ClubeDesportivo("Siio", "Onte", new ArrayList<Atleta>());
+
+        assertNotEquals(test2, test);
+    }
+
+
+
 }

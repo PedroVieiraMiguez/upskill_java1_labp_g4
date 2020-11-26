@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author Java1 - grupo4
  * 
  * Current class implements the tool for creating new athletes (as Atleta) accordingly with 3 types of athletes
- * (Profissional, Semi-Profissional e Amador, the last two being Não Profissionais) and with specific information for each
+ * (Profissional, Semi-Profissional e Amador, the last two being Nao Profissionais) and with specific information for each
  * (such as name, Civil number identification, age in years, gender, associated activity for training,
  * training objective, rest heart rate value, and total monthly prize)
  * It has implementations for retriving or calculate several output values and parameters, such as
@@ -34,8 +34,8 @@ public abstract class Atleta implements Comparable<Atleta> {
     private static final Atividade ATIVIDADE_OMISSAO = Atividade.CAMINHADA;
     private static final ObjectivoTreino OBJECTIVO_TREINO_OMISSAO = ObjectivoTreino.QUEIMA_GORDURA;
     
-    private static double QUEIMA_IT = 0.6;
-    private static double CARDIO_IT = 0.75;
+    private static final double QUEIMA_IT = 0.6;
+    private static final double CARDIO_IT = 0.75;
 
     private static final double IRS = 0.1;
 
@@ -104,7 +104,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @return Número de Identidicação Civil for a given Atleta (numIdCivil as an int, composed by 7 to 9 digits).
+     * @return Nï¿½mero de Identidicaï¿½ï¿½o Civil for a given Atleta (numIdCivil as an int, composed by 7 to 9 digits).
      */
     public int getNumIdCivil() {
         return numIdCivil;
@@ -112,7 +112,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @param numIdCivil sets the Número de Identidicação Civil for a given Atleta
+     * @param numIdCivil sets the Nï¿½mero de Identidicaï¿½ï¿½o Civil for a given Atleta
      * (numIdCivil as an int, composed by 7 to 9 digits)
      */
     public void setNumIdCivil(int numIdCivil) {
@@ -137,7 +137,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @return Frequência Cardíaca em Repouso for a given Atleta (freqCardRepouso as a double, value between 0 and 200)
+     * @return Frequï¿½ncia Cardï¿½aca em Repouso for a given Atleta (freqCardRepouso as a double, value between 0 and 200)
      */
     public double getFreqCardRepouso() {
         return freqCardRepouso;
@@ -145,7 +145,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @param freqCardRepouso sets the Frequência Cardíaca em Repouso for a given Atleta
+     * @param freqCardRepouso sets the Frequï¿½ncia Cardï¿½aca em Repouso for a given Atleta
      * (freqCardRepouso as a double, value between 0 and 200)
      */
     public void setFreqCardRepouso(double freqCardRepouso) {
@@ -284,7 +284,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @return the value for Frequência Cardíaca de Trabalho (work heart rate), considering the following formulla
+     * @return the value for Frequï¿½ncia Cardï¿½aca de Trabalho (work heart rate), considering the following formulla
      * FCT = FCR + [IT * (FCM - FCR)]
      * @see getFreqCardRepouso()
      * @see determinarIT()
@@ -296,7 +296,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     /**
      *
-     * @return the Frequência Cardíaca Máxima (max heart rate) considering the activity, gender and age of the athlete (Atleta)
+     * @return the Frequï¿½ncia Cardï¿½aca Mï¿½xima (max heart rate) considering the activity, gender and age of the athlete (Atleta)
      * @see getGenero()
      * @see getIdade()
      * @see getAtividade()
@@ -323,7 +323,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     /**
      *
      * @return value for Intensidade de Treino (training intensity) according with the training objective (Objectivio de Treino)
-     * @see getObjectivoTreino()
+     * See {@link #getObjectivoTreino()}
      */
     public double determinarIT(){
         if (this.objectivoTreino == ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA){

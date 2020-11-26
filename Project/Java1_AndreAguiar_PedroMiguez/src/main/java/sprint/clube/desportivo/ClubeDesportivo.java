@@ -2,6 +2,7 @@ package sprint.clube.desportivo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
 
 public class ClubeDesportivo {
     private String nomeClube;
@@ -80,6 +81,16 @@ public class ClubeDesportivo {
     @Override
     public String toString(){
         return String.format("Nome do clube: %s || Data de Fundação: %s%n", getNomeClube(), getDataFundacao());
-    }  
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ClubeDesportivo that = (ClubeDesportivo) o;
+        return Objects.equals(getNomeClube(), that.getNomeClube()) &&
+                Objects.equals(getDataFundacao(), that.getDataFundacao()) &&
+                Objects.equals(getAtletasInscritos(), that.getAtletasInscritos());
+    }
 
 }
